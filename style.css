@@ -1,0 +1,346 @@
+/* style.css */
+
+/* Règles générales pour réinitialiser les styles par défaut du navigateur */
+body, h1, p, ul, li, a, form, input, button, select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la taille totale de l'élément */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Police similaire à Netflix */
+}
+
+body {
+    background-color: #000; /* Fond noir comme Netflix */
+    color: #fff; /* Texte blanc par défaut */
+    display: flex;
+    flex-direction: column; /* Pour organiser header, main et footer verticalement */
+    min-height: 100vh; /* La page prend au moins toute la hauteur de la vue */
+}
+
+a {
+    color: #fff;
+    text-decoration: none; /* Pas de soulignement par défaut pour les liens */
+}
+
+a:hover {
+    text-decoration: underline; /* Souligne les liens au survol */
+}
+
+/* Conteneur général pour centrer le contenu (utilisé pour header et footer) */
+.container {
+    width: 90%;
+    max-width: 960px; /* Largeur maximale pour le contenu */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+}
+
+/* Header (en-tête) */
+.header {
+    background-color: #000; /* Fond noir */
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Bordure subtile en bas */
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between; /* Aligne le logo à gauche et le bouton à droite */
+    align-items: center; /* Centre verticalement les éléments */
+}
+
+.header .logo {
+    color: #E50914; /* Rouge Netflix */
+    font-size: 28px; /* Taille du texte du logo */
+    font-weight: bold;
+    text-transform: uppercase; /* Met le texte en majuscules */
+    letter-spacing: 2px; /* Espacement entre les lettres */
+}
+
+.header .btn-ouvrir {
+    background-color: #E50914; /* Rouge Netflix */
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 3px; /* Coins légèrement arrondis */
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease; /* Animation douce au survol */
+}
+
+.header .btn-ouvrir:hover {
+    background-color: #f40612; /* Rouge un peu plus clair au survol */
+    text-decoration: none;
+}
+
+/* Main Content (contenu principal du formulaire) */
+.main-content {
+    flex-grow: 1; /* Permet à cette section de prendre tout l'espace disponible entre header et footer */
+    display: flex;
+    justify-content: center; /* Centre le formulaire horizontalement */
+    align-items: center; /* Centre le formulaire verticalement */
+    padding: 20px; /* Un peu de padding autour du formulaire */
+}
+
+.login-form-container {
+    background-color: rgba(0, 0, 0, 0.75); /* Fond noir légèrement transparent */
+    padding: 60px 68px;
+    border-radius: 4px; /* Coins arrondis */
+    max-width: 450px; /* Largeur maximale du conteneur du formulaire */
+    width: 100%; /* Prend toute la largeur disponible jusqu'à max-width */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre subtile */
+}
+
+.login-form-container h1 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 28px; /* Espacement sous le titre */
+}
+
+.login-form .input-group {
+    margin-bottom: 16px; /* Espacement entre les champs de saisie */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 16px 20px;
+    background-color: #333; /* Fond gris foncé pour les champs */
+    border: none;
+    border-radius: 4px;
+    color: #fff; /* Texte de saisie blanc */
+    font-size: 16px;
+    outline: none; /* Supprime le contour bleu au focus */
+}
+
+.login-form input[type="text"]::placeholder,
+.login-form input[type="password"]::placeholder {
+    color: #8c8c8c; /* Couleur du texte d'exemple (placeholder) */
+}
+
+.login-form .btn-submit {
+    width: 100%;
+    background-color: #E50914; /* Rouge Netflix */
+    color: #fff;
+    padding: 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 24px; /* Espacement au-dessus du bouton */
+    transition: background-color 0.3s ease;
+}
+
+.login-form .btn-submit:hover {
+    background-color: #f40612;
+}
+
+.login-form .or-separator {
+    color: #8c8c8c;
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    font-size: 14px;
+}
+
+/* Lignes de chaque côté du "OU" */
+.login-form .or-separator::before,
+.login-form .or-separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%; /* Longueur des lignes */
+    height: 1px;
+    background-color: #444; /* Couleur des lignes */
+}
+
+.login-form .or-separator::before {
+    left: 0;
+}
+
+.login-form .or-separator::after {
+    right: 0;
+}
+
+
+.login-form .btn-code {
+    width: 100%;
+    background-color: #555; /* Gris plus clair pour le bouton secondaire */
+    color: #fff;
+    padding: 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.login-form .btn-code:hover {
+    background-color: #666;
+}
+
+.login-form .forgot-password {
+    display: block; /* Prend toute la largeur disponible */
+    text-align: center;
+    color: #8c8c8c;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.login-form .remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #8c8c8c;
+}
+
+.login-form .remember-me input[type="checkbox"] {
+    width: 16px; /* Taille de la case à cocher */
+    height: 16px;
+    margin-right: 8px;
+    background-color: #737373; /* Couleur de fond de la case */
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    /* Styles pour la case à cocher personnalisée */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+}
+
+.login-form .remember-me input[type="checkbox"]:checked {
+    background-color: #fff; /* Fond blanc quand cochée */
+    border: 1px solid #737373;
+}
+
+.login-form .remember-me input[type="checkbox"]:checked::after {
+    content: '\2713'; /* Symbole de coche Unicode */
+    display: block;
+    color: #000; /* Couleur de la coche */
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.login-form .signup-text {
+    color: #8c8c8c;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.login-form .signup-text a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.login-form .recaptcha-text {
+    color: #8c8c8c;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.login-form .recaptcha-text a {
+    color: #0071eb; /* Bleu pour le lien "En savoir plus" */
+}
+
+/* Footer (pied de page) */
+.footer {
+    background-color: rgba(0, 0, 0, 0.75); /* Fond similaire au formulaire */
+    color: #8c8c8c;
+    padding: 30px 0;
+    margin-top: auto; /* Pousse le footer vers le bas si le contenu est court */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer .container {
+    max-width: 900px; /* Le footer est un peu plus large */
+    padding: 0 20px;
+}
+
+.footer-contact {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.footer-contact a {
+    color: #8c8c8c;
+}
+
+.footer-links ul {
+    list-style: none; /* Supprime les puces de liste */
+    display: flex;
+    flex-wrap: wrap; /* Permet aux liens de passer à la ligne sur petits écrans */
+    margin-bottom: 20px;
+}
+
+.footer-links li {
+    width: 25%; /* 4 colonnes sur des écrans larges */
+    margin-bottom: 16px;
+    font-size: 13px;
+}
+
+.footer-links a {
+    color: #8c8c8c;
+}
+
+.lang-selector {
+    margin-top: 20px;
+}
+
+.lang-selector select {
+    background-color: #000;
+    color: #8c8c8c;
+    border: 1px solid #444;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    -webkit-appearance: none; /* Supprime les styles par défaut du navigateur pour le sélecteur */
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20stroke%3D%22%238c8c8c%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2010%205%2014%209%22%2F%3E%3C%2Fsvg%3E'); /* Icône de flèche déroulante */
+    background-repeat: no-repeat;
+    background-position: right 12px center; /* Positionne l'icône */
+    padding-right: 30px; /* Laisse de la place pour l'icône */
+}
+
+/* Media Queries pour la responsivité */
+@media (max-width: 768px) {
+    .header .logo {
+        font-size: 24px;
+    }
+
+    .login-form-container {
+        padding: 40px 30px; /* Réduit le padding sur les petits écrans */
+    }
+
+    .login-form-container h1 {
+        font-size: 28px;
+    }
+
+    .footer-links li {
+        width: 33.33%; /* 3 colonnes sur les tablettes */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form-container {
+        padding: 30px 20px;
+        border-radius: 0; /* Pas de coins arrondis sur les très petits écrans pour s'étendre sur les bords */
+        max-width: 100%; /* Prend toute la largeur sur mobile */
+    }
+     .main-content {
+        padding: 0; /* Retire le padding pour que le formulaire prenne tout l'espace */
+    }
+    .footer-links li {
+        width: 50%; /* 2 colonnes sur les téléphones */
+    }
+    .footer .container {
+        padding: 0 15px;
+    }
+}
+http://2fwww.w3.org/

